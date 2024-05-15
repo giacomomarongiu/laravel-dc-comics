@@ -14,8 +14,8 @@
                             <img class="h-75" src="{{ $comic['thumb'] }}" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h5 class="card-title fw-bold"> {{ $comic['title'] }}</h5>
-{{--                                 <a href="{{ route('comic', ['page' => Route::currentRouteName(),'id' => $index]) }}" class="btn btn-primary mb-0">MORE
-                                    INFO</a> --}}
+                                <a href="{{ route('comic.show', $comic) }}" class="btn btn-primary mb-0">MORE
+                                    INFO</a>
                             </div>
                         </div>
                     </div>
