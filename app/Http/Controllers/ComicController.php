@@ -22,7 +22,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        // I only have to write this return, the rest is handled by the store method
+        return view('comics.create');
     }
 
     /**
@@ -30,7 +31,22 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // At the momemnt NO validation
+        // Create a new istance
+        $data = $request->all();
+        $newComic = new Comic();
+        $newComic->title = $data['title'];
+        $newComic->description = $data['description'];
+        $newComic->thumb = $data['thumb'];
+        $newComic->price = $data['price'];
+        $newComic->series = $data['series'];
+        $newComic->sale_date = $data['sale_date'];
+        $newComic->type = $data['type'];
+        $newComic->save();
+
+        
+        // if I don't do it every time the page is refreshed the post method will always send the same data, I have to redirect to another page
+        return to_route('comics.index');
     }
 
     /**
