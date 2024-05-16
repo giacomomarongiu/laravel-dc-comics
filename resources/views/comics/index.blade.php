@@ -10,20 +10,54 @@
                 <a class="btn btn-primary" href="{{ route('comic.create') }}"> Add new comic </a>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                @foreach ($comics as $index => $comic)
-                    <div class="col ">
-                        <div class="card border-0 h-100 m-auto">
-                            <img class="h-75" src="{{ $comic['thumb'] }}" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <h5 class="card-title fw-bold"> {{ $comic['title'] }}</h5>
-                                <a href="{{ route('comic.show', $comic) }}" class="btn btn-primary mb-0">MORE
-                                    INFO</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Thumb</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Series</th>
+                            <th scope="col">SaleDate</th>
+                            <th scope="col">Type</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($comics as $index => $comic)
+                            <tr class="">
+                                <td scope="row">{{ $comic->id }}</td>
+                                <td>{{ $comic->title }}</td>
+                                <td scope="row">{{ $comic->description }}</td>
+                                <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
+                                <td>{{ $comic->price }}</td>
+                                <td>{{ $comic->series }}</td>
+                                <td>{{ $comic->sale_date }}</td>
+                                <td>{{ $comic->type }}</td>
+                                <td>
+                                    <a href="{{ route('comic.show', $comic) }}"><i class="fas fa-eye fa-sm fa-fw"></i></a>
+                                    /Edit/Delete
+                                </td>
+
+                            </tr>
+                        @empty
+
+                            <tr class="">
+                                <td scope="row" colspan="7">Nothing to show</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
             </div>
+
+{{--             {{ $comics->links('pagination::bootstrap-5') }}
+ --}}
+        
         </div>
     </section>
 @endsection
+
