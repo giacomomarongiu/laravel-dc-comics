@@ -3,7 +3,7 @@
 @section('content')
     <section class="py-4">
         <div class="container w-75">
-            <h2 class="text-center py-3 text-primary">
+            <h2 class="text-center py-1 text-primary">
                 All comics.
             </h2>
             <div class="d-flex justify-content-center py-3">
@@ -20,9 +20,9 @@
                             <th scope="col">Img</th>
                             <th scope="col">Price</th>
                             <th scope="col">Series</th>
-                            <th scope="col">SaleDate</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Buttons</th>
+                            <th class="px-3" scope="col">SaleDate</th>
+                            <th class="px-5" scope="col">Type</th>
+                            <th class="px-5" scope="col">Buttons</th>
 
 
                         </tr>
@@ -35,8 +35,8 @@
                                 <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
                                 <td>{{ $comic->price }}</td>
                                 <td>{{ $comic->series }}</td>
-                                <td class="">{{ $comic->sale_date }}</td>
-                                <td>{{ $comic->type }}</td>
+                                <td class="text-center">{{ $comic->sale_date }}</td>
+                                <td class="text-center">{{ $comic->type }}</td>
                                 <td class="text-center">
                                     <a class="" href="{{ route('comics.show', $comic) }}">
                                         <i class="fas fa-eye fa-sm fa-fw"></i>
@@ -99,6 +99,10 @@
                         @endforelse
                     </tbody>
                 </table>
+                            <div class="d-flex justify-content-center py-3">
+                <a class="btn btn-primary" href="{{ route('comics.create') }}"> Add new comic </a>
+            </div>
+
             </div>
 
             {{--             {{ $comics->links('pagination::bootstrap-5') }}
