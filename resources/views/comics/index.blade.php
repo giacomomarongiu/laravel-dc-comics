@@ -17,12 +17,12 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Thumb</th>
+                            <th scope="col">Img</th>
                             <th scope="col">Price</th>
                             <th scope="col">Series</th>
                             <th scope="col">SaleDate</th>
                             <th scope="col">Type</th>
+                            <th scope="col">Buttons</th>
 
 
                         </tr>
@@ -32,8 +32,8 @@
                             <tr class="">
                                 <td scope="row">{{ $comic->id }}</td>
                                 <td>{{ $comic->title }}</td>
-                                <td scope="row">{{ $comic->description }}</td>
-                                <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
+{{--                                 <td class="overflow-hidden my_height" >{{ $comic->description }}</td>
+ --}}                                <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
                                 <td>{{ $comic->price }}</td>
                                 <td>{{ $comic->series }}</td>
                                 <td>{{ $comic->sale_date }}</td>

@@ -24,6 +24,12 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="sale_date" class="form-label">Img URL</label>
+                    <input type="text" class="form-control" id="sale_date" aria-describedby="sale_dateHelp"
+                        name="sale_date">
+                </div>
+
+                <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
                     <input type="text" class="form-control" id="price" aria-describedby="priceHelp" name="price">
                 </div>
@@ -35,6 +41,12 @@
 
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Sale Date</label>
+                    <input type="text" class="form-control" id="sale_date" aria-describedby="sale_dateHelp"
+                        name="sale_date">
+                </div>
+
+                <div class="mb-3">
+                    <label for="sale_date" class="form-label">Type</label>
                     <input type="text" class="form-control" id="sale_date" aria-describedby="sale_dateHelp"
                         name="sale_date">
                 </div>
