@@ -35,11 +35,18 @@
                                 <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
                                 <td>{{ $comic->price }}</td>
                                 <td>{{ $comic->series }}</td>
-                                <td>{{ $comic->sale_date }}</td>
+                                <td class="">{{ $comic->sale_date }}</td>
                                 <td>{{ $comic->type }}</td>
                                 <td>
-                                    <a href="{{ route('comics.show', $comic) }}"><i class="fas fa-eye fa-sm fa-fw"></i></a>
-                                    /Edit/Delete
+                                    <a href="{{ route('comics.show', $comic) }}">
+                                        <i class="fas fa-eye fa-sm fa-fw"></i>
+                                    </a>
+                                    <a href="{{ route('comics.edit', $comic) }}">
+                                        <i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+                                    </a>
+                                    <a class="text-danger" href="{{ route('comics.edit', $comic) }}">
+                                        <i class="fa-solid fa-toilet"></i>
+                                    </a>
                                 </td>
 
                             </tr>

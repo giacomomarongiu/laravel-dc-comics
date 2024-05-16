@@ -1,4 +1,4 @@
-        <footer>
+        <footer class="bg-primary">
             <div class="container w-75 h-100">
                 <div class="row w-50 pt-3 w-100">
                     <div class="col-3">
@@ -25,15 +25,5 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_bar">
-                <div class="container w-75 d-flex justify-content-between align-items-center h-100">
-                    <button class="btn btn-primary">Click</button>
-                    <div class="logos">
-                        <!--ICons printed dinamically-->
-{{--                         @foreach ($icons as $icon)
-                            <img src="{{ Vite::asset($icon) }}" alt="">
-                        @endforeach --}}
-                    </div>
-                </div>
-            </div>
+
         </footer>
