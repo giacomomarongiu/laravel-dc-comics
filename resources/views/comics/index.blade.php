@@ -6,6 +6,9 @@
             <h2 class="text-center py-3 text-primary">
                 All comics.
             </h2>
+            <div class="d-flex justify-content-center py-3">
+                <a class="btn btn-primary" href="{{ route('comic.create') }}"> Add new comic </a>
+            </div>
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach ($comics as $index => $comic)

@@ -43,8 +43,8 @@ class ComicController extends Controller
         $newComic->sale_date = $data['sale_date'];
         $newComic->type = $data['type'];
         $newComic->save();
+        dd($newComic);
 
-        
         // if I don't do it every time the page is refreshed the post method will always send the same data, I have to redirect to another page
         return to_route('comics.index');
     }
