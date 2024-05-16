@@ -14,3 +14,7 @@ store()
 
 ### Bonus:
 creare il seeder per la tabella comics utilizzando il file in allegato.
+
+#### Bonus day 2:
+- Quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
+- Implementate le regole di validazione come visto in classe sia per store che update e nei form mostrate gli errori di validazione.

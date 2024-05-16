@@ -31,9 +31,24 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        // At the momemnt NO validation
+        // VALIDATION
+        $val_data = $request->validate([
+            'title' => 'required|min:3|max:150',
+            'description' => 'required',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:15',
+            'series' => 'required|max:30',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:50'
+        ]);
+
+        //dd($val_data);
+        
+        Comic::create($val_data);
+
+
         // Create a new istance
-        $data = $request->all();
+        /* $data = $request->all();
         $newComic = new Comic();
         $newComic->title = $data['title'];
         $newComic->description = $data['description'];
@@ -45,7 +60,7 @@ class ComicController extends Controller
         //Let's see it
         //dd($newComic);
         //save it in my db
-        $newComic->save();
+        $newComic->save(); */
 
 
         // if I don't do it every time the page is refreshed the post method will always send the same data, I have to redirect to another page
@@ -75,7 +90,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $comic->update($request->all());
+        $val_data = $request->validate([
+            'title' => 'required|min:3|max:150',
+            'description' => 'required',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:15',
+            'series' => 'required|max:30',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:50'
+        ]);
+
+        //dd($val_data);
+
+        $comic->update($val_data);
         //dd($comic);
         return to_route('comics.show', $comic);
     }
@@ -85,7 +112,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        
+
         $comic->delete();
         return to_route('comics.index');
     }
