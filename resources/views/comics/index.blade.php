@@ -7,7 +7,7 @@
                 All comics.
             </h2>
             <div class="d-flex justify-content-center py-3">
-                <a class="btn btn-primary" href="{{ route('comic.create') }}"> Add new comic </a>
+                <a class="btn btn-primary" href="{{ route('comics.create') }}"> Add new comic </a>
             </div>
 
 
@@ -32,14 +32,13 @@
                             <tr class="">
                                 <td scope="row">{{ $comic->id }}</td>
                                 <td>{{ $comic->title }}</td>
-{{--                                 <td class="overflow-hidden my_height" >{{ $comic->description }}</td>
- --}}                                <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
+                                <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
                                 <td>{{ $comic->price }}</td>
                                 <td>{{ $comic->series }}</td>
                                 <td>{{ $comic->sale_date }}</td>
                                 <td>{{ $comic->type }}</td>
                                 <td>
-                                    <a href="{{ route('comic.show', $comic) }}"><i class="fas fa-eye fa-sm fa-fw"></i></a>
+                                    <a href="{{ route('comics.show', $comic) }}"><i class="fas fa-eye fa-sm fa-fw"></i></a>
                                     /Edit/Delete
                                 </td>
 
@@ -54,10 +53,9 @@
                 </table>
             </div>
 
-{{--             {{ $comics->links('pagination::bootstrap-5') }}
+            {{--             {{ $comics->links('pagination::bootstrap-5') }}
  --}}
-        
+
         </div>
     </section>
 @endsection
-

@@ -24,9 +24,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="sale_date" class="form-label">Img URL</label>
-                    <input type="text" class="form-control" id="sale_date" aria-describedby="sale_dateHelp"
-                        name="sale_date">
+                    <label for="thumb" class="form-label">Img URL</label>
+                    <input type="text" class="form-control" id="thumb" aria-describedby="thumbHelp"
+                        name="thumb">
                 </div>
 
                 <div class="mb-3">
@@ -46,9 +46,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="sale_date" class="form-label">Type</label>
-                    <input type="text" class="form-control" id="sale_date" aria-describedby="sale_dateHelp"
-                        name="sale_date">
+                    <label for="type" class="form-label">Type</label>
+                    <input type="text" class="form-control" id="type" aria-describedby="typeHelp"
+                        name="type">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
